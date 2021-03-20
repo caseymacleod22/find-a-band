@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Add a Band | Find-a-Band</title>
+</head>
+<body>
+    <h2>Enter a New Band</h2>
+    <form action="/bands/index" method="POST">
+        <label>Band
+            <input type="text" name="bandName">
+        </label>
+        <label>Year Formed
+            <input type="text" name="yearFormed">
+        </label>
+        <label>Band Members
+            <input type="text" name="bandMembers">
+        </label>
+        <label>Albums
+            <input type="text" name="albums">
+        </label>
+        <label>Genre
+            <input type="text" name="genre">
+        </label>
+        <label>Is this band still active?
+            <input type="checkbox" name="stillActive" checked>
+        </label>
+        <input type="submit" value="Add Band">
+    </form>
+</body>
+</html>

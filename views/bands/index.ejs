@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Band Index | Find-a-Band</title>
+</head>
+<body>
+    <h1>Band Index</h1>
+    <table>
+        <thead>
+            <th>Band Name:</th>
+            <th>Year Formed:</th>
+            <th>Band Members:</th>
+            <th>Albums:</th>
+            <th>Genre:</th>
+            <th>Still Active?:</th>
+        </thead>
+        <tbody>
+            <% bands.forEach(band => { %>
+                <tr>
+                    <td><%= band.bandName %></td>
+                    <td><%= band.yearFormed %></td>
+                    <td><%= band.bandMembers.join(', ') %></td>
+                    <td><%= band.albums.join(', ')%></td>
+                    <td><%= band.genre %></td>
+                    <td><%= band.stillActive ? 'Yes' : 'No' %></td>
+                </tr>
+           <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>
