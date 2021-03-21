@@ -20,8 +20,9 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 
 // Mount routes with app.use()
-app.use('/', indexRouter)
 app.use('/bands', bandsRouter)
+app.use('/', indexRouter)
+
 
 
 // Tell App to listen

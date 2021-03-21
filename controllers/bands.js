@@ -29,7 +29,14 @@ function index(req, res) {
     })
 }
 
-
+function show(req, res) {
+    Band.findById(req.params.id, function(err, band) {
+        console.log(band)
+        res.render('bands/show', {
+            band
+        })
+    })
+}
 
 
 
@@ -38,4 +45,5 @@ module.exports = {
     new: newBand,
     create,
     index,
+    show,
 }
