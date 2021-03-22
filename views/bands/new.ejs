@@ -4,29 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="/css/style.css">
     <title>Add a Band | Find-a-Band</title>
 </head>
 <body>
-    <h2>Enter a New Band</h2>
-    <form action="/bands/index" method="POST">
+    <nav>
+        <h1>Enter a New Band</h1>
+        <li class= "links">
+            <a href="/">Home Page</a>
+      </li>
+      <li class="links">
+          <a href="./index">All Bands</a>
+      </li>
+    </nav>
+    <form class="new" action="/bands/index" method="POST">
         <label>Band
-            <input type="text" name="bandName">
+            <input type="text" name="bandName"><br><br><br>         
         </label>
         <label>Year Formed
-            <input type="text" name="yearFormed">
+            <input type="text" name="yearFormed"><br><br><br>
         </label>
         <label>Band Members
-            <input type="text" name="bandMembers">
+            <input type="text" name="bandMembers"><br><br><br>
         </label>
-        <label>Albums
-            <input type="text" name="albums">
-        </label>
+        <!-- <label>Albums
+            <input type="text" name="albums"><br><br><br>
+        </label> -->
         <label>Genre
-            <input type="text" name="genre">
+            <input type="text" name="genre"><br><br><br>
         </label>
         <label>Is this band still active?
-            <input type="checkbox" name="stillActive" checked>
+            <input type="checkbox" name="stillActive" checked>Yes</input><br><br><br>
         </label>
         <input type="submit" value="Add Band">
     </form>

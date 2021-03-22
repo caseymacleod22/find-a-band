@@ -6,21 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel='stylesheet' href='/css/style.css' />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">    
     <title>Find-a-Band</title>
 </head>
 
 <body>
     <header>
-        <h1>Find-a-Band</h1>
-        <ul>
-            <li>
-                <a href="bands/index">Bands</a>
-            </li>
-            <li>
-                <a href="bands/new">Add a Band</a>
-            </li>
-        </ul>
+        <nav>
+            <h1>Find-a-Band</h1>
+             <li class= "links">
+                   <a href="bands/index">All Bands</a>
+             </li>
+             <li class="links">
+                 <a href="bands/new">Add a Band</a>
+             </li>
+         </nav>    
     </header>
+    <form action="bands/show" method='GET'>
+        <input type="search" name="bandName">
+        <button type="submit">Search</button>
+    </form>
 </body>
 
 </html>

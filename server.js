@@ -4,6 +4,7 @@ const morgan = require('morgan');
 const port = 3000; 
 const indexRouter = require('./routes/index')
 const bandsRouter = require('./routes/bands')
+const albumsRouter = require('./routes/albums')
 
 // Set up express app
 const app = express();
@@ -20,9 +21,9 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 
 // Mount routes with app.use()
-app.use('/bands', bandsRouter)
 app.use('/', indexRouter)
-
+app.use('/bands', bandsRouter)
+app.use('/', albumsRouter)
 
 
 // Tell App to listen

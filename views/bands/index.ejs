@@ -4,20 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="/css/style.css">
     <title>Band Index | Find-a-Band</title>
 </head>
 <body>
+  <nav>
     <h1>Band Index</h1>
-    <table>
-        <thead>
-            <th>Band Name:</th>
-        </thead>
+    <li class= "links">
+        <a href="/">Home Page</a>
+  </li>
+  <li class="links">
+      <a href="./new">Add a Band</a>
+  </li>
+  </nav>  
+  <h2 class="index">Select a Band to Learn More</h2>
+    <table class="index">
         <tbody>
             <% bands.forEach(band => { %>
                 <tr>
-                    <td><%= band.bandName %></td>
-                    <td><a href="/bands/<%= band._id %>">DETAILS</a></td>
+                     <td><a href="/bands/<%= band._id %>"><%= band.bandName %></a></td>
                 </tr>
            <% }) %>
         </tbody>
