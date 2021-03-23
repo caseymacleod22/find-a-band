@@ -22,8 +22,8 @@ This app allows users to search for any band they can think of! Can't find the b
 
 # Wireframes
 Home Page
-![home page](./images/home-page.png)
+![home page](./public/images/home-page.png)
 Add Band
-![add band](./images/add-band.png)
+![add band](./public/images/add-band.png)
 Band Index
-![band index](./images/band-index.png)
+![band index](./public/images/band-index.png)
