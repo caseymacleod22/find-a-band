@@ -7,6 +7,7 @@ body {
     background-size: 100%;
     margin: 0;
     padding: 0;
+    display:
 }
 
 nav {
@@ -36,9 +37,12 @@ nav {
 }
 
 .info {
-    display: inline-block;
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    font-size: x-large;
+    font-weight: 700;
+    font-family: 'Metal Mania';
+    align-items: center;
 }
 
 .albums {

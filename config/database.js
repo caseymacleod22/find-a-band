@@ -8,6 +8,8 @@ const connectionURI = `mongodb+srv://admin:pepper22@cluster0.esjr1.mongodb.net/$
 // shortcut to mongoose.connection object
 const db = mongoose.connection;
 
+module.exports = db
+
 mongoose.connect(connectionURI, {
     useNewUrlParser: true,
     useCreateIndex: true,

@@ -24,22 +24,14 @@
     </nav>    
 
  <main>
-    <table class="info">
-        <thead>
-            <th>Band Name:</th>
-            <th>Year Formed:</th>
-            <th>Genre:</th>
-            <th>Still Active?:</th>
-        </thead>
-        <tbody>
-                <tr>
-                    <td><%= band.bandName %></td>
-                    <td><%= band.yearFormed %></td>
-                    <td><%= band.genre %></td>
-                    <td><%= band.stillActive ? 'Yes' : 'No' %></td>
-                </tr>
-        </tbody>
-    </table>
+    <div class="info">
+        <div>
+            <div>Band Name: <%= band.bandName %></div><br>
+            <div>Year Formed: <%= band.yearFormed %></div><br>
+            <div>Genre: <%= band.genre %></div><br>
+            <div>Still Active?: <%= band.stillActive ? 'Yes' : 'No' %></div><br>
+        </div>
+    </div>
 
     
 <h2>Band Members</h2>
@@ -48,21 +40,21 @@
 <table class='members'>
 <thead>
 <tr>
-  <th>Name:</th>
-  <th>Instrument:</th>
+  <!-- <th>Name:</th>
+  <th>Instrument:</th> -->
 </tr>
 </thead>
 <tbody>
 <% band.bandMembers.forEach(function(m) { %>
 <tr>
-  <td><%= m.fullName %></td>
+  <td><%= m.fullName + ' |' %></td> 
   <td><%= m.instrument %></td>
 </tr>
 <% }); %>
 </tbody>
 </table>
 <% } else { %>
-<h5>Empty</h5>
+<h5>No band members listed</h5>
 <% } %>
 
 <h3>Add Band Members:</h3>
