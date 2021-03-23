@@ -7,10 +7,15 @@ const albumSchema = new Schema({
     runTime: Number,
 })
 
+const memberSchema = new Schema({
+    fullName: String,
+    instrument: String
+})
+
 const bandSchema = new Schema({
     bandName: String,
     yearFormed: Number,
-    bandMembers: [String],
+    bandMembers: [memberSchema],
     albums: [albumSchema],
     genre: String,
     stillActive: Boolean,

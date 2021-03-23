@@ -7,8 +7,8 @@ function newBand(req, res) {
 
 function create(req, res) {
     req.body.stillActive = !!req.body.stillActive
-    req.body.bandMembers = req.body.bandMembers.replace(/\s*,\s*/g, ',')
-    if (req.body.bandMembers) req.body.bandMembers = req.body.bandMembers.split(',')
+    // req.body.bandMembers = req.body.bandMembers.replace(/\s*,\s*/g, ',')
+    // if (req.body.bandMembers) req.body.bandMembers = req.body.bandMembers.split(',')
     
     const band = new Band(req.body)
     band.save(function(err) {
@@ -20,7 +20,7 @@ function create(req, res) {
 
 function index(req, res) {
     Band.find({}, function(err, bands) {
-        res.render('bands/index', { title: 'Band Index',
+        res.render('bands/index', {
             bands
         })
     })
@@ -36,9 +36,12 @@ function show(req, res) {
 }
 
 function search(req, res) {
-    const { bandName } = req.query
-    const bands = Band.find({text: {$search: bandName}})
-    res.render('bands/show', { bands })
+    Band.findOne(req.params.bandName, function(err, band) {
+        console.log(band)
+        res.render('bands/show', {
+            band
+        })
+    })
 }
 
 module.exports = {

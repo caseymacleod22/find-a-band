@@ -5,6 +5,7 @@ const port = 3000;
 const indexRouter = require('./routes/index')
 const bandsRouter = require('./routes/bands')
 const albumsRouter = require('./routes/albums')
+const membersRouter = require('./routes/members')
 
 // Set up express app
 const app = express();
@@ -24,6 +25,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use('/', indexRouter)
 app.use('/bands', bandsRouter)
 app.use('/', albumsRouter)
+app.use('/', membersRouter)
 
 
 // Tell App to listen
