@@ -28,20 +28,22 @@ function index(req, res) {
 
 function show(req, res) {
     Band.findById(req.params.id, function(err, band) {
-        console.log(band)
-        res.render('bands/show', { title: 'Band Info', 
+        res.render('bands/show', {
             band
         })
     })
 }
 
-function search(req, res) {
-    Band.findOne(req.params.bandName, function(err, band) {
-        console.log(band)
-        res.render('bands/show', {
-            band
-        })
+function getBand(req, res) {
+    const searchTerm = {bandName: req.query.band}
+    Band.findOne(searchTerm,  function (err, band) {
+       console.log(band)
+        res.json(band)
     })
+}
+
+function search(req, res) {
+    res.render('bands/search', {bandName: 'Search'})
 }
 
 module.exports = {
@@ -50,4 +52,5 @@ module.exports = {
     index,
     show,
     search,
+    getBand,
 }

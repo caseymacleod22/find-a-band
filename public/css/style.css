@@ -7,7 +7,6 @@ body {
     background-size: 100%;
     margin: 0;
     padding: 0;
-    display:
 }
 
 nav {
@@ -19,11 +18,30 @@ nav {
     background-color: rgba(152, 61, 204, 0.2);
 }
 
+input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+.band-members {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: rgb(121, 73, 172, 0.15);
+    border-style: solid;
+    border-radius: 10px;
+    margin-left: 25%;
+    margin-right: 25%;
+    font-size: x-large;
+    font-family: 'Eczar', serif;
+    color: rgb(121, 73, 172)
+}
+
 .new {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: 'Metal Mania', cursive;
+    justify-content: space-around;
 }
 
 .index {
@@ -32,8 +50,11 @@ nav {
     justify-content: center;
     font-size: x-large;
     font-family: 'Metal Mania';
-    border-radius: 3px;
-    border-color: indigo;
+}
+
+.band-link {
+    border-style: solid;
+    border-color: rgb(121, 73, 172, 0.15);
 }
 
 .info {
@@ -55,6 +76,14 @@ h1 {
     text-align: center;
     font-family: 'Metal Mania', cursive;
     font-size: xx-large;
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Metal Mania';
+    color: rgb(121, 73, 172)
 }
 
 .links {

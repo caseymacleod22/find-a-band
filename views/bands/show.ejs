@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Eczar&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="/css/style.css">
     <title>Band Info | Find-a-Band</title>
 </head>
@@ -31,45 +33,38 @@
             <div>Genre: <%= band.genre %></div><br>
             <div>Still Active?: <%= band.stillActive ? 'Yes' : 'No' %></div><br>
         </div>
-    </div>
+    </div><br><br>
 
     
 <h2>Band Members</h2>
-
-<% if (band.bandMembers.length) { %>
-<table class='members'>
-<thead>
-<tr>
-  <!-- <th>Name:</th>
-  <th>Instrument:</th> -->
-</tr>
-</thead>
-<tbody>
-<% band.bandMembers.forEach(function(m) { %>
-<tr>
-  <td><%= m.fullName + ' |' %></td> 
-  <td><%= m.instrument %></td>
-</tr>
-<% }); %>
-</tbody>
-</table>
-<% } else { %>
-<h5>No band members listed</h5>
-<% } %>
+<div class="band-members">
+    <% if (band.bandMembers.length) { %>
+    <table class='members'> 
+    <tbody>
+    <% band.bandMembers.forEach(function(m) { %>
+    <tr>
+     <td><%= m.fullName + ' |' %></td> 
+     <td><%= m.instrument %></td>
+    </tr>
+    <% }); %>
+    </tbody>
+    </table>
+    <% } else { %>
+    <h5>No band members listed</h5>
+    <% } %>
+</div>
 
 <h3>Add Band Members:</h3>
-<form
+    <form
     id="add-members-form"
     method="POST"
-    action="/bands/<%= band._id %>/members"
->
+    action="/bands/<%= band._id %>/members">
     <label>Name:</label>
     <input type="text" name="fullName">
     <label>Instrument:</label>
     <input type="text" name="instrument">
     <input type="submit" value="Add Band Member">
-</form> 
-
+    </form> 
 
 <h2>Albums</h2>
 

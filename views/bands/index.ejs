@@ -21,7 +21,7 @@
   </nav>  
   <h2 class="index">Select a Band to Learn More</h2>
     <table class="index">
-        <tbody>
+        <tbody class="band-link">
             <% bands.forEach(band => { %>
                 <tr class='index'>
                      <td><a href="/bands/<%= band._id %>"><%= band.bandName %></a></td>

@@ -6,6 +6,7 @@ const indexRouter = require('./routes/index')
 const bandsRouter = require('./routes/bands')
 const albumsRouter = require('./routes/albums')
 const membersRouter = require('./routes/members')
+const searchRouter = require('./routes/search')
 
 
 // Set up express app
@@ -27,6 +28,7 @@ app.use('/', indexRouter)
 app.use('/bands', bandsRouter)
 app.use('/', albumsRouter)
 app.use('/', membersRouter)
+app.use('/', searchRouter)
 
 
 // Tell App to listen
