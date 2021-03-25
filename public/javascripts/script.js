@@ -23,9 +23,9 @@ function handleSubmit(evt) {
     
 function render() {
     $results.html(`
-        <a href="/bands/${results._id}">
+        <a id="search-results" href="/bands/${results._id}">
          <h3>${results.bandName}</h3>
-         <p>${results.yearFormed}<p>
+         <p>${results.genre}<p>
         </a>
          `)
 }

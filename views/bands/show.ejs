@@ -72,17 +72,17 @@
 <table class='albums'>
   <thead>
     <tr>
-      <th>Name:</th>
+      <!-- <th>Name:</th>
       <th>Release Year:</th>
-      <th>Runtime:</th>
+      <th>Runtime:</th> -->
     </tr>
   </thead>
   <tbody>
     <% band.albums.forEach(function(a) { %>
     <tr>
-      <td><%= a.albumName %></td>
-      <td><%= a.releaseYear %></td>
-      <td><%= a.runTime + ' minutes'%></td>
+      <td>Name: <%= a.albumName + ' |'%></td>
+      <td>Release Year: <%= a.releaseYear + ' |'%></td>
+      <td>Runtime: <%= a.runTime + ' minutes'%></td>
         <% if (a.runTime === null) { %>
           <% return('n/a') %>
        <% } %>

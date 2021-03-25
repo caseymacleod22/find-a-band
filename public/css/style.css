@@ -1,12 +1,16 @@
 * {
     box-sizing: border-box;
+    margin-bottom: 20px;
 }
 
 body {
-    background-image: url('https://images.unsplash.com/photo-1459233313842-cd392ee2c388?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mjl8fG11c2ljfGVufDB8fDB8&auto=format&fit=crop&w=500&q=60');
-    background-size: 100%;
     margin: 0;
     padding: 0;
+    background-image: url('https://images.unsplash.com/photo-1459233313842-cd392ee2c388?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mjl8fG11c2ljfGVufDB8fDB8&auto=format&fit=crop&w=500&q=60');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 nav {
@@ -31,6 +35,20 @@ input[type="submit"]:hover {
     border-radius: 10px;
     margin-left: 25%;
     margin-right: 25%;
+    font-size: x-large;
+    font-family: 'Eczar', serif;
+    color: rgb(121, 73, 172)
+}
+
+.albums {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: rgb(121, 73, 172, 0.15);
+    border-style: solid;
+    border-radius: 10px;
+    margin-left: 7%;
+    margin-right: 7%;
     font-size: x-large;
     font-family: 'Eczar', serif;
     color: rgb(121, 73, 172)
@@ -64,12 +82,7 @@ input[type="submit"]:hover {
     font-weight: 700;
     font-family: 'Metal Mania';
     align-items: center;
-}
-
-.albums {
-    display: inline-block;
-    flex-direction: column;
-    align-items: flex-start;
+    color:black
 }
 
 h1 {
@@ -92,7 +105,36 @@ h2 {
 
 }
 
-.show-page {
+.show-page, .home-page, .index-page, .add-page {
     display: flex;
     flex-direction: column;
+}
+
+#search-form, #search-results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#search-results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Metal Mania';
+    font-size: xx-large;
+}
+
+h3, h5, #add-album-form, #add-members-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Eczar';
+}
+
+.welcome-text {
+    font-size: 25px;
+    font-family: 'Eczar';
+    text-align: center;
+    color: rgb(155, 116, 196);
 }
