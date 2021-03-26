@@ -39,3 +39,5 @@ Band Details
 - Sort band index alphabetically
 - Sort albums chronologically by release year 
 
+##  ➡️ Check It Out!
+[Click here](http://find-a-band-project2.herokuapp.com/) to go to the site!
