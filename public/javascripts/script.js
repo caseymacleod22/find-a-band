@@ -28,6 +28,4 @@ function render() {
          <p>${results.genre}<p>
         </a>
          `)
-}
-
-}
+}}

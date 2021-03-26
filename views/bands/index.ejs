@@ -24,7 +24,7 @@
         <tbody class="band-link">
             <% bands.forEach(band => { %>
                 <tr class='index'>
-                     <td><a href="/bands/<%= band._id %>"><%= band.bandName %></a></td>
+                     <td><a id="band-link" href="/bands/<%= band._id %>"><%= band.bandName %></a></td>
                 </tr>
            <% }) %>
         </tbody>

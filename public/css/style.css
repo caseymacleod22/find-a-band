@@ -138,3 +138,11 @@ h3, h5, #add-album-form, #add-members-form {
     text-align: center;
     color: rgb(155, 116, 196);
 }
+
+#header {
+    font-size: 30px;
+}
+
+#band-link {
+    text-decoration: none;
+}
