@@ -4,4 +4,4 @@ const albumsCtrl = require('../controllers/albums')
 
 router.post('/bands/:id/albums', albumsCtrl.create)
 
-module.exports = router
+// module.exports = router
