@@ -18,13 +18,13 @@ function create(req, res) {
     })
 }
 
-function index(req, res) {
-    Band.find({}, function(err, bands) {
-        res.render('bands/index', {
-            bands
-        })
-    })
-}
+// function index(req, res) {
+//     Band.find({}, function(err, bands) {
+//         res.render('bands/index', {
+//             bands
+//         })
+//     })
+// }
 
 function show(req, res) {
     Band.findById(req.params.id, function(err, band) {
