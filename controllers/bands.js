@@ -1,9 +1,9 @@
 const Band = require('../models/band')
 
 
-function newBand(req, res) {
-    res.render('bands/new')
-}
+// function newBand(req, res) {
+//     res.render('bands/new')
+// }
 
 function create(req, res) {
     req.body.stillActive = !!req.body.stillActive
